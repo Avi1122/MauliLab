@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Packages - MauliLab</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Same header as index.html -->
+    </header>
+
+    <main>
+        <section class="packages">
+            <div class="section-title">
+                <h2>Our Health Packages</h2>
+                <p>Comprehensive health screening packages tailored to your needs</p>
+            </div>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Basic Health Checkup</h3>
+                        <div class="package-price">₹ 1000 <span>/person</span></div>
+                    </div>
+                    <ul class="package-features">
+                        <li>Complete Blood Count</li>
+                        <li>Liver Function Test</li>
+                        <li>Kidney Function Test</li>
+                        <li>Blood Sugar (Fasting)</li>
+                        <li>Lipid Profile</li>
+                        <li>Free Doctor Consultation</li>
+                    </ul>
+                    <a href="javascript:void(0)" onclick="openWhatsApp('Basic Health Checkup')" class="book-button">Book Now</a>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Comprehensive Health</h3>
+                        <div class="package-price">₹ 3700 <span>/person</span></div>
+                    </div>
+                    <ul class="package-features">
+                        <li>All Basic Tests</li>
+                        <li>Thyroid Profile</li>
+                        <li>Vitamin D</li>
+                        <li>Vitamin B12</li>
+                        <li>HbA1c</li>
+                        <li>Doctor Consultation</li>
+                    </ul>
+                    <a href="javascript:void(0)" onclick="openWhatsApp('Comprehensive Health')" class="book-button">Book Now</a>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Women's Health</h3>
+                        <div class="package-price">₹ 2850 <span>/person</span></div>
+                    </div>
+                    <ul class="package-features">
+                        <li>Complete Blood Count</li>
+                        <li>Thyroid Profile</li>
+                        <li>Vitamin D</li>
+                        <li>Calcium</li>
+                        <li>Iron Studies</li>
+                        <li>Gynecologist Consultation</li>
+                    </ul>
+                    <a href="javascript:void(0)" onclick="openWhatsApp('Women Health')" class="book-button">Book Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="javascript:void(0)" onclick="openWhatsApp()" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        function openWhatsApp(package = '') {
+            const phoneNumber = '+91 8698569573'; // Replace with your WhatsApp number
+            const message = package 
+                ? `Hi, I'm interested in booking the ${package} package.`
+                : 'Hi, I would like to book a test.';
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>

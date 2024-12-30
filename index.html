@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mauli Lab - Advanced Clinical Laboratory</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i>+91 8698569573</span>
+                <span><i class="fas fa-envelope"></i>info@Maulilab.com</span>
+                <span><i class="fas fa-clock"></i>Mon-Sat: 7:00 AM - 9:00 PM</span>
+            </div>
+            <div class="quick-links">
+                <a href="#"><i class="fas fa-user"></i> Patient Portal</a>
+                <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+        </div>
+        <nav>
+            <div class="logo">MauliLab</div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="services.html">Services</a>
+                <a href="packages.html">Health Packages</a>
+                <a href="about.html">About Us</a>
+                <a href="javascript:void(0)" onclick="openWhatsApp()" class="cta-button">Book Test</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Mauli Diagnostics for a Healthier You</h1>
+                <p>Your trusted partner in accurate medical testing with state-of-the-art technology and expert healthcare professionals.</p>
+                <div class="cta-buttons">
+                    <a href="javascript:void(0)" onclick="openWhatsApp()" class="primary-button">
+                        Book a Test <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="packages.html" class="secondary-button">
+                        View Packages <i class="fas fa-list"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-award"></i>
+                <h3>NABL Certified</h3>
+                <p>Highest quality standards in diagnostic testing with international accreditation.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-clock"></i>
+                <h3>Quick Results</h3>
+                <p>Get your test results within 24 hours for most routine tests.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-home"></i>
+                <h3>Home Collection</h3>
+                <p>Convenient sample collection at your doorstep by trained professionals.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-user-md"></i>
+                <h3>Expert Team</h3>
+                <p>Qualified pathologists and technicians with years of experience.</p>
+            </div>
+        </section>
+
+        <section class="packages">
+            <div class="section-title">
+                <h2>Health Packages</h2>
+                <p>Choose from our carefully designed health packages for comprehensive wellness screening.</p>
+            </div>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Basic Health Checkup</h3>
+                        <div class="package-price">₹ 1000 <span>/person</span></div>
+                    </div>
+                    <ul class="package-features">
+                        <li>Complete Blood Count</li>
+                        <li>Liver Function Test</li>
+                        <li>Kidney Function Test</li>
+                        <li>Blood Sugar (Fasting)</li>
+                        <li>Lipid Profile</li>
+                        <li>Free Doctor Consultation</li>
+                    </ul>
+                    <a href="javascript:void(0)" onclick="openWhatsApp('Basic Health Checkup')" class="book-button">Book Now</a>
+                </div>
+                <!-- More package cards... -->
+            </div>
+        </section>
+    </main>
+
+    <a href="javascript:void(0)" onclick="openWhatsApp()" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        function openWhatsApp(package = '') {
+            const phoneNumber = '+91 8698569573'; // Replace with your WhatsApp number
+            const message = package 
+                ? `Hi, I'm interested in booking the ${package} package.`
+                : 'Hi, I would like to book a test.';
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
